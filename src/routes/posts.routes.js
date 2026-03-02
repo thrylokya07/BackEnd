@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
         data: [
             {
                 id: 1,
-                title: "post"
+                title: "First modular post"
             }
         ]
     });
