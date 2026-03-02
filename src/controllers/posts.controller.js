@@ -10,3 +10,17 @@ const getAllPosts = (req,res)=>{
     })
 }
 module.exports = { getAllPosts };
+
+
+
+
+
+
+
+const getPostById = async(req,res)=>{
+    const postId = req.params.postId;
+    res.status(200).json({
+        message: "Fetching data with ID:"+postId
+    })
+}
+module.exports = {getPostById,getAllPosts};
