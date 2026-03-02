@@ -1,5 +1,8 @@
 const express = require("express");
 const router = express.Router();
+const {getAllPosts} =require('../controllers/posts.controller.js');
+router.get('/',getAllPosts);
+
 
 router.get('/', (req, res) => {
     res.status(200).json({
@@ -7,10 +10,14 @@ router.get('/', (req, res) => {
         data: [
             {
                 id: 1,
-                title: "post"
+                title: "First modular post"
             }
         ]
     });
 });
+
+
+
+router.get('/:postId',postConroller.getPostById);
 
 module.exports = router;
